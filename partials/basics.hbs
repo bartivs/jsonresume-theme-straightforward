@@ -38,7 +38,7 @@
         {{/if}}
         {{#location}}
           <div>
-            <span class='address'>{{city}}, {{STATE_ABBREVIATION_TO_FULL_NAME region}}</span>
+            <span class='address'>{{city}}, {{STATE_ABBREVIATION_TO_FULL_NAME region ?? region}}</span>
           </div>
         {{/location}}
       </div>
