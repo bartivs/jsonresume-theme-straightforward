@@ -29,7 +29,7 @@ Handlebars.registerHelper('MONTH_YEAR', dateString =>
   })
 );
 
-Handlebars.registerHelper('IF_DATES_HAVE_SAME_MONTH_AND_YEAR', function (arg1, arg2) {
+Handlebars.registerHelper('IF_DATES_HAVE_SAME_MONTH_AND_YEAR', function(arg1, arg2) {
   // prevents situation where we render same month/date combination
   // such as "Sept. 2020 - Sept. 2020"
   const d1 = new Date(arg1 + "T00:00:00")
@@ -100,7 +100,8 @@ Handlebars.registerHelper('STATE_ABBREVIATION_TO_FULL_NAME', (state) => {
     MP: "Northern Mariana Islands",
     PR: "Puerto Rico",
     VI: "U.S. Virgin Islands",
-    UM: "U.S. Minor Outlying Islands"
+    UM: "U.S. Minor Outlying Islands",
+    ASU: "Asuncion"
   }
   if (stateList[state] != null) {
     return stateList[state];
@@ -159,7 +160,8 @@ Handlebars.registerHelper('STATE_NAME_TO_ABBREVIATION', (state) => {
     'Washington': 'WA',
     'West Virginia': 'WV',
     'Wisconsin': 'WI',
-    'Wyoming': 'WY'
+    'Wyoming': 'WY',
+    'Asuncion': 'AS'
   }
   if (stateList[state] != null) {
     return stateList[state];

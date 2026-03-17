@@ -1,0 +1,28 @@
+{{#if resume.references.length}}
+  <div id='references' class='section-block'>
+    <div class='section-intro'>
+      <div class='section-name'>
+        <span>REFERENCES</span>
+      </div>
+      <div class='section-intro-line'></div>
+    </div>
+    <div class='section-content'>
+      {{#each resume.references}}
+        <div class='reference-block'>
+          <div class='reference-header'>
+            <span class='title'>{{name}}</span>
+            {{#if email}}
+              <span class='reference-email'><a href='mailto:{{email}}'>{{email}}</a></span>
+            {{/if}}
+          </div>
+          {{#if reference}}
+            <p class='reference-text'>{{reference}}</p>
+          {{/if}}
+        </div>
+        {{#unless @last}}
+          <div class='separator'></div>
+        {{/unless}}
+      {{/each}}
+    </div>
+  </div>
+{{/if}}
