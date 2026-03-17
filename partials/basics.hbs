@@ -4,9 +4,7 @@
       {{!-- note: this content should not appear or have any effect on styling, this is only to enable any automated content parsing --}}
       <div class='display-none'>
         {{#location}}
-          <span class='address'>
-            {{address}} {{city}} {{region}} {{postalCode}}
-          </span>
+          <span class='address'>{{.}}</span>
         {{/location}}
         {{#if phone}}
           <span class='phone'>
@@ -38,7 +36,7 @@
         {{/if}}
         {{#location}}
           <div>
-            <span class='address'>{{city}}, {{STATE_ABBREVIATION_TO_FULL_NAME region}}</span>
+            <span class='address'>{{.}}</span>
           </div>
         {{/location}}
       </div>
