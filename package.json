@@ -22,7 +22,8 @@
     "index.js",
     "partials/*.hbs",
     "resume.hbs",
-    "style.css"
+    "style.css",
+    "multi-language.js"
   ],
   "scripts": {
     "start": "resume serve --theme .",
