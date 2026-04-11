@@ -58,4 +58,18 @@ describe('Handlebars Tests', () => {
 
   })
 
+  describe('section title helper', () => {
+    test('defaults to english when no language is provided', () => {
+      const template = Handlebars.compile("{{SECTION_TITLE 'summary'}}")
+      const result = template({ resume: {} })
+      expect(result).toEqual('SUMMARY')
+    })
+
+    test('uses configured language when provided', () => {
+      const template = Handlebars.compile("{{SECTION_TITLE 'summary'}}")
+      const result = template({ resume: { meta: { titlesLanguage: 'es' } } })
+      expect(result).toEqual('RESUMEN')
+    })
+  })
+
 })

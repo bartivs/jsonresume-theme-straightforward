@@ -2,7 +2,7 @@
   <div id='work-block' class='section-block'>
     <div class='section-intro'>
       <div class='section-name'>
-        <span>EXPERIENCE</span>
+        <span>{{SECTION_TITLE 'work'}}</span>
       </div>
       <div class='section-intro-line'></div>
     </div>
@@ -14,7 +14,7 @@
             <span class='title'>{{position}}</span>
             <span class='date'>
               <time datetime="{{startDate}}">{{MONTH_YEAR startDate}}</time> &mdash;
-              {{#if endDate}}<time datetime="{{endDate}}">{{MONTH_YEAR endDate}}</time>{{else}}Present{{/if}}
+              {{#if endDate}}<time datetime="{{endDate}}">{{MONTH_YEAR endDate}}</time>{{else}}{{SECTION_TITLE 'present'}}{{/if}}
             </span>
           </div>
 

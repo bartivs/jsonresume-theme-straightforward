@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require('path')
 const Handlebars = require("handlebars");
+const { getSectionTitle } = require('./multi-language')
 
 const extname = '.hbs'
 const partialsDir = path.join(__dirname, 'partials')
@@ -42,6 +43,11 @@ Handlebars.registerHelper('IF_DATES_HAVE_SAME_MONTH_AND_YEAR', function(arg1, ar
 Handlebars.registerHelper('join', (arr, separator) =>
   arr.join(typeof separator === 'string' ? separator : ', '),
 )
+Handlebars.registerHelper('SECTION_TITLE', function(key, options) {
+  const resume = options && options.data && options.data.root && options.data.root.resume
+  const language = resume && resume.meta && resume.meta.titlesLanguage
+  return getSectionTitle(key, language)
+})
 Handlebars.registerHelper('STATE_ABBREVIATION_TO_FULL_NAME', (state) => {
   const stateList = {
     AZ: 'Arizona',

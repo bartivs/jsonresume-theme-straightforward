@@ -18,6 +18,10 @@ resume export resume.pdf --format pdf --theme jsonresume-theme-straightforward
 resume export resume.html --format html --theme jsonresume-theme-straightforward
 ```
 
+### section titles language
+
+Set `resume.meta.titlesLanguage` to one of the supported language codes (`en`, `es`, `fr`) to localize every section heading (and the "Present" label for current work). When the field is omitted or the code is unknown, the theme falls back to English.
+
 ## building local
 
 ```sh
